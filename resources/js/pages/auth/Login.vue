@@ -21,8 +21,8 @@ defineProps<{
 
 <template>
     <AuthBase
-        title="Log in to your account"
-        description="Enter your email and password below to log in"
+        title="Log in to your test account"
+        description="Email: test@gmail.com, Password: 'password'"
     >
         <Head title="Log in" />
 
