@@ -1,25 +1,40 @@
-# Laravel + Vue Starter Kit
+# Project Setup
 
-## Introduction
+## Prerequisites
 
-Our Vue starter kit provides a robust, modern starting point for building Laravel applications with a Vue frontend using [Inertia](https://inertiajs.com).
+- PHP (>=8.3)
+- Composer
+- Npm vite
+- MySQL or MariaDB
+- Docker
 
-Inertia allows you to build modern, single-page Vue applications using classic server-side routing and controllers. This lets you enjoy the frontend power of Vue combined with the incredible backend productivity of Laravel and lightning-fast Vite compilation.
+### Copy the .env.example file
 
-This Vue starter kit utilizes Vue 3 and the Composition API, TypeScript, Tailwind, and the [shadcn-vue](https://www.shadcn-vue.com) component library.
+```
+cp .env.example .env
+```
 
-## Official Documentation
+### Run make start
 
-Documentation for all Laravel starter kits can be found on the [Laravel website](https://laravel.com/docs/starter-kits).
+```
+make start
+```
 
-## Contributing
+### Run make seed
 
-Thank you for considering contributing to our starter kit! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```
+make seed
+```
 
-## Code of Conduct
+### Run back
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```
+./vendor/bin/sail up -d
+```
 
-## License
+### Run front
 
-The Laravel + Vue starter kit is open-sourced software licensed under the MIT license.
+```
+./vendor/bin/sail npm run dev
+```
+
