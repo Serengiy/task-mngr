@@ -16,7 +16,7 @@ start: # развернуть приложение с нуля
 seed: # заполнить приложение сидерами
 	./vendor/bin/sail artisan migrate
 	./vendor/bin/sail artisan db:seed
-	./vendor/bin/sail artisan test
+	./vendor/bin/sail artisan app:set-up
 
 up: # Поднятие контейнеров
 	docker compose up --remove-orphans
