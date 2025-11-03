@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use App\Models\Task;
 use App\Models\User;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Hash;
 
 class SetUpCommand extends Command
 {
@@ -30,6 +31,7 @@ class SetUpCommand extends Command
         $user = User::query()->create([
             'email' => 'test@gmail.com',
             'name' => fake()->name(),
+            'password' => Hash::make('password'),
         ]);
 
         $otherUsers = User::factory(10)->create();

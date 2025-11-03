@@ -20,6 +20,7 @@ seed: # заполнить приложение сидерами
 
 up: # Поднятие контейнеров
 	docker compose up --remove-orphans
+	docker npm run dev
 
 up-d: # Поднятие контейнеров в фоне
 	docker compose up -d --remove-orphans
