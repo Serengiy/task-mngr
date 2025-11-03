@@ -36,4 +36,33 @@ export interface User {
     updated_at: string;
 }
 
+export interface UserResource {
+    id: number;
+    name: string;
+    email: string;
+}
+
+export interface CommentResource {
+    id: number;
+    text: string;
+    created_at: string;
+    updated_at: string;
+    user: UserResource;
+}
+
+export interface TaskResource {
+    id: number;
+    name: string;
+    description: string;
+    status: string;
+    created_at: string;
+    updated_at: string;
+    due_date: string;
+    creator: UserResource;
+    responsible: UserResource;
+    participants: UserResource[];
+    comments: CommentResource[];
+}
+
+
 export type BreadcrumbItemType = BreadcrumbItem;
