@@ -28,8 +28,9 @@ class SetUpCommand extends Command
      */
     public function handle()
     {
-        $user = User::query()->create([
+        $user = User::query()->firstOrCreate([
             'email' => 'test@gmail.com',
+        ], [
             'name' => fake()->name(),
             'password' => Hash::make('password'),
         ]);

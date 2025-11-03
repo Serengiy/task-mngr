@@ -8,10 +8,10 @@ include .env
 
 start: # развернуть приложение с нуля
 	composer install
-	npm install
 	php artisan sail:install
 	./vendor/bin/sail up -d
 	./vendor/bin/sail artisan key:generate
+	./vendor/bin/sail npm install
 
 seed: # заполнить приложение сидерами
 	./vendor/bin/sail artisan migrate
